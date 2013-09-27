@@ -1,4 +1,9 @@
 /build
 
 /bin
+/WebContent/WEB-INF/lib
 *.class
+
+*.jar
+*.war
+!/lib/ivy-2.3.0.jar
