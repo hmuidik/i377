@@ -6,4 +6,5 @@
 
 *.jar
 *.war
+*.ear
 !/lib/ivy-2.3.0.jar
