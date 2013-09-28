@@ -44,6 +44,6 @@
 
 	<target name="clean">
 		<delete dir="${build.dir}" />
-		<delete dir="${webContent.dir}" />
+		<delete dir="${webContent.dir}/WEB-INF/lib" />
 	</target>
 </project>
