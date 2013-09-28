@@ -39,10 +39,11 @@
 
 	<target name="init">
 		<mkdir dir="${classes.dir}" />
-		<mkdir dir="${webcontent.dir}/WEB-INF/lib" />
+		<mkdir dir="${webContent.dir}/WEB-INF/lib" />
 	</target>
 
 	<target name="clean">
 		<delete dir="${build.dir}" />
+		<delete dir="${webContent.dir}" />
 	</target>
 </project>
