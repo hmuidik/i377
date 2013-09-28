@@ -31,7 +31,7 @@
 		<ivy:retrieve pattern="${ivy.retrieve.pattern}" conf="default" />
 	</target>
 
-	<target name="compile" depends="clean, init">
+	<target name="compile" depends="clean, init, retrieve">
 		<javac srcdir="${src.dir}" destdir="${classes.dir}" source="1.6" target="1.6" includeantruntime="false">
 			<classpath refid="classpath" />
 			</javac>
@@ -39,6 +39,7 @@
 
 	<target name="init">
 		<mkdir dir="${classes.dir}" />
+		<mkdir dir="${webcontent.dir}/WEB-INF/lib" />
 	</target>
 
 	<target name="clean">
