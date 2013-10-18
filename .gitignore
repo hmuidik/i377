@@ -8,3 +8,15 @@
 *.war
 *.ear
 !/lib/ivy-2.3.0.jar
+/build
+/build
+/build
+/build
+/build
+/build
+/build
+/build
+/build
+/build
+/build
+/build
