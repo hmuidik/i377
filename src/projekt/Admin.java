@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +16,23 @@ public class Admin extends HttpServlet {
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		switch(request.getParameter("do")){
+		if("clear_data".equalsIgnoreCase(request.getParameter("do"))){
+			try {
+				(new Dao()).deleteData();;
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		else if("insert_data".equalsIgnoreCase(request.getParameter("do"))){
+			try {
+				new SetupDao().addData();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		/*switch(request.getParameter("do")){
 		case "clear_data":
 			try {
 				(new Dao()).deleteData();
@@ -29,7 +46,7 @@ public class Admin extends HttpServlet {
 		
 		default:
 			break;
-		}
+		}*/
 		
 		response.sendRedirect("Search");
 	}
